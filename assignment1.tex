@@ -1,0 +1,275 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Assignment1},
+  pdfauthor={Kowshik Sarker},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Assignment1}
+\author{Kowshik Sarker}
+\date{7/19/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{from-the-usjudgeratings-dataset-find-the-mean-and-standard-delivation-of-the-oevrall-ratings-of-the-judges}{%
+\subsection{1.From the USJudgeRatings dataset find the mean and standard
+delivation of the oevrall ratings of the
+judges}\label{from-the-usjudgeratings-dataset-find-the-mean-and-standard-delivation-of-the-oevrall-ratings-of-the-judges}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{overallratings<-USJudgeRatings}
+\NormalTok{overallratings<-}\KeywordTok{transform}\NormalTok{(overallratings,}\DataTypeTok{Mean=}\KeywordTok{apply}\NormalTok{(USJudgeRatings,}\DecValTok{1}\NormalTok{,mean),}\DataTypeTok{SD=}\KeywordTok{apply}\NormalTok{(USJudgeRatings,}\DecValTok{1}\NormalTok{,sd))}
+\NormalTok{overallratings<-}\KeywordTok{as.data.frame}\NormalTok{(overallratings[,}\KeywordTok{c}\NormalTok{(}\DecValTok{13}\OperatorTok{:}\DecValTok{14}\NormalTok{)])}
+\NormalTok{overallratings}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                     Mean        SD
+## AARONSON,L.H.   7.291667 0.6459079
+## ALEXANDER,J.M.  8.150000 0.5807519
+## ARMENTANO,A.J.  7.616667 0.2657180
+## BERDON,R.I.     8.458333 0.5484828
+## BRACKEN,J.J.    5.733333 0.8172385
+## BURNS,E.B.      8.116667 0.6873312
+## CALLAHAN,R.J.   8.858333 0.5991787
+## COHEN,S.S.      5.458333 0.7786449
+## DALY,J.J.       8.516667 0.4281744
+## DANNEHY,J.F.    7.891667 0.4294994
+## DEAN,H.H.       7.458333 0.4144182
+## DEVITA,H.J.     7.125000 0.3744693
+## DRISCOLL,P.J.   7.366667 0.6443225
+## GRILLO,A.E.     6.683333 0.3613946
+## HADDEN,W.L.JR.  7.850000 0.4562695
+## HAMILL,E.C.     7.450000 0.3060006
+## HEALEY.A.H.     6.866667 0.4942089
+## HULL,T.C.       7.400000 0.3541956
+## LEVINE,I.       7.808333 0.2712206
+## LEVISTER,R.L.   6.608333 1.0663944
+## MARTIN,L.F.     7.091667 0.5017394
+## MCGRATH,J.F.    6.783333 0.4489044
+## MIGNONE,A.F.    5.841667 0.7140898
+## MISSAL,H.M.     7.458333 0.5282188
+## MULVEY,H.M.     8.450000 0.3205110
+## NARUK,H.J.      8.783333 0.3270622
+## O'BRIEN,F.J.    7.941667 0.3654594
+## O'SULLIVAN,T.J. 8.483333 0.3950451
+## PASKEY,L.       8.066667 0.2570226
+## RUBINOW,J.E.    8.791667 0.5822501
+## SADEN.G.A.      7.775000 0.5879471
+## SATANIELLO,A.G. 7.800000 0.3074824
+## SHEA,D.M.       8.191667 0.4718596
+## SHEA,J.F.JR.    8.500000 0.4199567
+## SIDOR,W.J.      5.808333 0.6921092
+## SPEZIALE,J.A.   8.183333 0.1749459
+## SPONZO,M.J.     7.841667 0.3553701
+## STAPLETON,J.F.  7.683333 0.4667749
+## TESTO,R.J.      7.108333 0.5264950
+## TIERNEY,W.L.JR. 7.983333 0.3186144
+## WALL,R.A.       7.016667 0.7505553
+## WRIGHT,D.B.     7.941667 0.3941812
+## ZARRILLI,K.J.   7.425000 0.4673426
+\end{verbatim}
+
+\hypertarget{read-the-aids2.csv-file}{%
+\subsection{2.Read the Aids2.csv file}\label{read-the-aids2.csv-file}}
+
+Before reading the file we need to set our working directory by setwd()
+command and keep the file in this directory and then execute the below
+commands.
+
+\begin{verbatim}
+##   X state sex  diag death status T.categ age
+## 1 1   NSW   M 10905 11081      D      hs  35
+## 2 2   NSW   M 11029 11096      D      hs  53
+## 3 3   NSW   M  9551  9983      D      hs  42
+## 4 4   NSW   M  9577  9654      D    haem  44
+## 5 5   NSW   M 10015 10290      D      hs  39
+## 6 6   NSW   M  9971 10344      D      hs  36
+\end{verbatim}
+
+\hypertarget{create-a-subset-of-the-data-without-the-state-other}{%
+\subsection{3.Create a subset of the data without the state
+``Other''}\label{create-a-subset-of-the-data-without-the-state-other}}
+
+\begin{verbatim}
+##   X state sex  diag death status T.categ age
+## 1 1   NSW   M 10905 11081      D      hs  35
+## 2 2   NSW   M 11029 11096      D      hs  53
+## 3 3   NSW   M  9551  9983      D      hs  42
+## 4 4   NSW   M  9577  9654      D    haem  44
+## 5 5   NSW   M 10015 10290      D      hs  39
+## 6 6   NSW   M  9971 10344      D      hs  36
+\end{verbatim}
+
+\#\#4.Add a new variable called `agebracket' \#\#if age is below 20,
+agebracket is ``0-20'' \#\#if age is between 20 to 40, agebracket is
+``20-40'' \#\#if age is between 40 to 60, agebracket is ``40-60'' \#\#if
+age is above 60, agebracket is ``\textgreater60''
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{agebracket<-}\KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"20"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"0-20"}\NormalTok{),}
+                               \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>=}\StringTok{"20"} \OperatorTok{&}\StringTok{ }\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"40"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"20-40"}\NormalTok{),}
+                                      \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>=}\StringTok{"40"} \OperatorTok{&}\StringTok{ }\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"60"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"40-60"}\NormalTok{),}
+                                             \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>}\StringTok{"60"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{">60"}\NormalTok{),}\StringTok{"NA"}\NormalTok{))))}
+      
+\KeywordTok{head}\NormalTok{(subset_aids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   X state sex  diag death status T.categ age agebracket
+## 1 1   NSW   M 10905 11081      D      hs  35      20-40
+## 2 2   NSW   M 11029 11096      D      hs  53      40-60
+## 3 3   NSW   M  9551  9983      D      hs  42      40-60
+## 4 4   NSW   M  9577  9654      D    haem  44      40-60
+## 5 5   NSW   M 10015 10290      D      hs  39      20-40
+## 6 6   NSW   M  9971 10344      D      hs  36      20-40
+\end{verbatim}
+
+\hypertarget{sort-the-data-from-high-to-low-based-on-the-variable-diag-and-then-low-to-high-based-on-death}{%
+\subsection{5.Sort the data from high to low based on the variable
+``diag'' and then low to high based on
+``death''}\label{sort-the-data-from-high-to-low-based-on-the-variable-diag-and-then-low-to-high-based-on-death}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subset_aids<-subset_aids[}\KeywordTok{order}\NormalTok{(}\OperatorTok{-}\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{diag,subset_aids}\OperatorTok{$}\NormalTok{death),]}
+\KeywordTok{head}\NormalTok{(subset_aids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         X state sex  diag death status T.categ age agebracket
+## 1654 1654   NSW   M 11503 11504      A      hs  56      40-60
+## 1755 1755   NSW   M 11503 11504      A      hs  32      20-40
+## 1650 1650   NSW   M 11502 11504      A      hs  39      20-40
+## 1680 1680   NSW   M 11502 11504      A      hs  26      20-40
+## 2011 2011   QLD   M 11502 11504      A    hsid  36      20-40
+## 2654 2654   VIC   M 11502 11504      A      hs  33      20-40
+\end{verbatim}
+
+\hypertarget{calculate-and-add-one-more-variable-which-is-diag2death-and-name-it-as-dd}{%
+\subsection{6.Calculate and add one more variable which is
+(diag\^{}2/death) and name it as
+``dd''}\label{calculate-and-add-one-more-variable-which-is-diag2death-and-name-it-as-dd}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{dd<-subset_aids}\OperatorTok{$}\NormalTok{diag}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{death}
+\KeywordTok{head}\NormalTok{(subset_aids)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         X state sex  diag death status T.categ age agebracket    dd
+## 1654 1654   NSW   M 11503 11504      A      hs  56      40-60 11502
+## 1755 1755   NSW   M 11503 11504      A      hs  32      20-40 11502
+## 1650 1650   NSW   M 11502 11504      A      hs  39      20-40 11500
+## 1680 1680   NSW   M 11502 11504      A      hs  26      20-40 11500
+## 2011 2011   QLD   M 11502 11504      A    hsid  36      20-40 11500
+## 2654 2654   VIC   M 11502 11504      A      hs  33      20-40 11500
+\end{verbatim}
+
+\hypertarget{end-of-the-assignment}{%
+\subsection{End Of The Assignment}\label{end-of-the-assignment}}
+
+\end{document}
