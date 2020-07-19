@@ -369,11 +369,11 @@ summary {
 </div>
 
 
-<p><a href="%22https://github.com/kowshiksarker/IBA-Repo%22">## Github Repo Link</a></p>
+<p>##Github Repo Link - “<a href="https://github.com/kowshiksarker/IBA-Repo" class="uri">https://github.com/kowshiksarker/IBA-Repo</a>”</p>
 <div id="from-the-usjudgeratings-dataset-find-the-mean-and-standard-delivation-of-the-oevrall-ratings-of-the-judges" class="section level2">
 <h2>1.From the USJudgeRatings dataset find the mean and standard delivation of the oevrall ratings of the judges</h2>
 <pre class="r"><code>overallratings&lt;-USJudgeRatings
-overallratings&lt;-transform(overallratings,Mean=apply(USJudgeRatings,1,mean),SD=apply(USJudgeRatings,1,sd))
+overallratings&lt;-transform(overallratings,Mean=apply(overallratings,1,mean),SD=apply(overallratings,1,sd))
 overallratings&lt;-as.data.frame(overallratings[,c(13:14)])
 overallratings</code></pre>
 <pre><code>##                     Mean        SD
@@ -444,7 +444,7 @@ overallratings</code></pre>
 <p>##4.Add a new variable called ‘agebracket’ ##if age is below 20, agebracket is “0-20” ##if age is between 20 to 40, agebracket is “20-40” ##if age is between 40 to 60, agebracket is “40-60” ##if age is above 60, agebracket is “&gt;60”</p>
 <pre class="r"><code>subset_aids$agebracket&lt;-ifelse(subset_aids$age&lt;&quot;20&quot;,c(&quot;0-20&quot;),
                                ifelse(subset_aids$age&gt;=&quot;20&quot; &amp; subset_aids$age&lt;&quot;40&quot;,c(&quot;20-40&quot;),
-                                      ifelse(subset_aids$age&gt;=&quot;40&quot; &amp; subset_aids$age&lt;&quot;60&quot;,c(&quot;40-60&quot;),
+                                      ifelse(subset_aids$age&gt;=&quot;40&quot; &amp; subset_aids$age&lt;=&quot;60&quot;,c(&quot;40-60&quot;),
                                              ifelse(subset_aids$age&gt;&quot;60&quot;,c(&quot;&gt;60&quot;),&quot;NA&quot;))))
       
 head(subset_aids)</code></pre>

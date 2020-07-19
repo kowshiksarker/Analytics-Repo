@@ -107,6 +107,10 @@
 \begin{document}
 \maketitle
 
+\hypertarget{github-repo-link---httpsgithub.comkowshiksarkeriba-repo}{%
+\subsection{\texorpdfstring{Github Repo Link -
+``\url{https://github.com/kowshiksarker/IBA-Repo}''}{Github Repo Link - ``https://github.com/kowshiksarker/IBA-Repo''}}\label{github-repo-link---httpsgithub.comkowshiksarkeriba-repo}}
+
 \hypertarget{from-the-usjudgeratings-dataset-find-the-mean-and-standard-delivation-of-the-oevrall-ratings-of-the-judges}{%
 \subsection{1.From the USJudgeRatings dataset find the mean and standard
 delivation of the oevrall ratings of the
@@ -115,7 +119,7 @@ judges}\label{from-the-usjudgeratings-dataset-find-the-mean-and-standard-delivat
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{overallratings<-USJudgeRatings}
-\NormalTok{overallratings<-}\KeywordTok{transform}\NormalTok{(overallratings,}\DataTypeTok{Mean=}\KeywordTok{apply}\NormalTok{(USJudgeRatings,}\DecValTok{1}\NormalTok{,mean),}\DataTypeTok{SD=}\KeywordTok{apply}\NormalTok{(USJudgeRatings,}\DecValTok{1}\NormalTok{,sd))}
+\NormalTok{overallratings<-}\KeywordTok{transform}\NormalTok{(overallratings,}\DataTypeTok{Mean=}\KeywordTok{apply}\NormalTok{(overallratings,}\DecValTok{1}\NormalTok{,mean),}\DataTypeTok{SD=}\KeywordTok{apply}\NormalTok{(overallratings,}\DecValTok{1}\NormalTok{,sd))}
 \NormalTok{overallratings<-}\KeywordTok{as.data.frame}\NormalTok{(overallratings[,}\KeywordTok{c}\NormalTok{(}\DecValTok{13}\OperatorTok{:}\DecValTok{14}\NormalTok{)])}
 \NormalTok{overallratings}
 \end{Highlighting}
@@ -208,7 +212,7 @@ age is above 60, agebracket is ``\textgreater60''
 \begin{Highlighting}[]
 \NormalTok{subset_aids}\OperatorTok{$}\NormalTok{agebracket<-}\KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"20"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"0-20"}\NormalTok{),}
                                \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>=}\StringTok{"20"} \OperatorTok{&}\StringTok{ }\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"40"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"20-40"}\NormalTok{),}
-                                      \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>=}\StringTok{"40"} \OperatorTok{&}\StringTok{ }\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<}\StringTok{"60"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"40-60"}\NormalTok{),}
+                                      \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>=}\StringTok{"40"} \OperatorTok{&}\StringTok{ }\NormalTok{subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{<=}\StringTok{"60"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"40-60"}\NormalTok{),}
                                              \KeywordTok{ifelse}\NormalTok{(subset_aids}\OperatorTok{$}\NormalTok{age}\OperatorTok{>}\StringTok{"60"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{">60"}\NormalTok{),}\StringTok{"NA"}\NormalTok{))))}
       
 \KeywordTok{head}\NormalTok{(subset_aids)}

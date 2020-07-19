@@ -4,20 +4,20 @@ author: "Kowshik Sarker"
 date: "7/19/2020"
 output:
   word_document: default
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-[Github Repo Link]("https://github.com/kowshiksarker/IBA-Repo")
+## Github Repo Link - "https://github.com/kowshiksarker/IBA-Repo"
 
 ## 1.From the USJudgeRatings dataset find the mean and standard delivation of the oevrall ratings of the judges
 
 ```{r,echo=TRUE}
 overallratings<-USJudgeRatings
-overallratings<-transform(overallratings,Mean=apply(USJudgeRatings,1,mean),SD=apply(USJudgeRatings,1,sd))
+overallratings<-transform(overallratings,Mean=apply(overallratings,1,mean),SD=apply(overallratings,1,sd))
 overallratings<-as.data.frame(overallratings[,c(13:14)])
 overallratings
 ```
@@ -44,7 +44,7 @@ head(subset_aids)
 ```{r,echo=TRUE}
 subset_aids$agebracket<-ifelse(subset_aids$age<"20",c("0-20"),
                                ifelse(subset_aids$age>="20" & subset_aids$age<"40",c("20-40"),
-                                      ifelse(subset_aids$age>="40" & subset_aids$age<"60",c("40-60"),
+                                      ifelse(subset_aids$age>="40" & subset_aids$age<="60",c("40-60"),
                                              ifelse(subset_aids$age>"60",c(">60"),"NA"))))
       
 head(subset_aids)
