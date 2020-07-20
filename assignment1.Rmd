@@ -24,22 +24,22 @@ overallratings
 
 ## 2.Read the Aids2.csv file
 Before reading the file we need to set our working directory by setwd() command and keep the file in this directory and then execute the below commands.
-```{r,echo=FALSE}
+```{r,echo=TRUE}
 aids<- read.csv("Aids2.csv")
 head(aids)
 ```
 
 ## 3.Create a subset of the data without the state "Other"
-```{r,echo=FALSE}
+```{r,echo=TRUE}
 subset_aids<-subset(aids,aids$state!="Other")
 head(subset_aids)
 ```
 
-##4.Add a new variable called 'agebracket'
-##if age is below 20, agebracket is "0-20"
-##if age is between 20 to 40, agebracket is "20-40"
-##if age is between 40 to 60, agebracket is "40-60"
-##if age is above 60, agebracket is ">60"
+## 4.Add a new variable called 'agebracket'
+## if age is below 20, agebracket is "0-20"
+## if age is between 20 to 40, agebracket is "20-40"
+## if age is between 40 to 60, agebracket is "40-60"
+## if age is above 60, agebracket is ">60"
 
 ```{r,echo=TRUE}
 subset_aids$agebracket<-ifelse(subset_aids$age<"20",c("0-20"),
